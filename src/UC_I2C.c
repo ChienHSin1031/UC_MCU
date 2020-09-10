@@ -3,17 +3,20 @@
 #include "HT67F5660.h"
 #include "UC_I2C.h"
 
-u8 ACK;
+u8 ACK = 1;
 
 
 //Init I2C SDA SCL 
 void i2c_init(void)
 {
 	SCLPU = 1;     //enable SCL pull-up
-	SCLC = 1;	   //SCL Set Input
+	SCLC = 0;	   //SCL Set Input
 	SDAPU = 1; 	   //enable SDA pull-up
-    SDAC = 1;	   //SDA Set Input
+    SDAC = 0;	   //SDA Set Input
+    SDA = 1;
+    SCL = 1;
     GCC_DELAY(20);
+    
 }
 
 //Start Signal SCL = 1, SDA HIGH TO DOWN
@@ -53,6 +56,7 @@ u8 i2c_read_ACK(void)
 	GCC_DELAY(5);
 	SCL = 0;
 	GCC_DELAY(5);
+	SDAC = 0;
 	
 	return ACK;		
 }

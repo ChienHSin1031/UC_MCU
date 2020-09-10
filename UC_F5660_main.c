@@ -27,7 +27,7 @@ void UC_HT16K33()
 {
 	init_HT16K33();
 	GCC_DELAY(20);
-	HT16K33_LED_ON();
+	//HT16K33_LED_ON();
 }
 
 
@@ -35,6 +35,7 @@ void init_HT16K33(void)
 {
 	i2c_init();
 	
+	//Turn ON Display
 	i2c_start();
 	i2c_write(HT16K33_write);    //Tx 16k33 address
 	if(i2c_read_ACK() == 0) 
@@ -47,7 +48,7 @@ void init_HT16K33(void)
 		}
 			
 	}
-	
+	//SET to ROW output
 	i2c_start();
 	i2c_write(HT16K33_write);
 	if(i2c_read_ACK() == 0)
@@ -107,7 +108,16 @@ void init_HT16K33(void)
 		
 	}
 	
-	
+	i2c_start();
+	i2c_write(HT16K33_write);
+	if(i2c_read_ACK() == 0)
+	{
+			i2c_write(HT16K33_Display_ON);
+			if(i2c_read_ACK() == 0)
+			{
+				i2c_stop();
+			}	
+	}
 	
 }
 
