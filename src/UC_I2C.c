@@ -30,16 +30,13 @@ void i2c_start(void)
 	SDA = 0;    //Set SDA to 
 }
 
-void i2c_stop(void)
+//Stop Signal SCL = 1, SDA 0 to 1
+void i2c_stop(void)  
 {
-	SDAC = 1;   //SDA Set to Input
-	if(SCL == 1) SCL = 0;
-	if(SDA == 1) SDA = 0;
-	GCC_DELAY(5);
 	SCL = 1;
+	SDA = 0;
 	GCC_DELAY(5);
-	SDA = 1;
-	GCC_DELAY(5);
+	SDA = 1;      
 	
 	SCLC = 1;  //Set to Input,release the SCL
 	SDAC = 1;  //Set to Input,release the SDA
@@ -49,16 +46,15 @@ void i2c_stop(void)
 
 
 u8 i2c_read_ACK(void)
-{
-	SDAC = 1;    //Set to Input Receive the Slave SDA 
-	SCL = 1;
-	ACK = SDA;
-	GCC_DELAY(5);
-	SCL = 0;
-	GCC_DELAY(5);
-	SDAC = 0;
+{	
 	
-	return ACK;		
+	SCLPU = 1;  //PULL HIGH Enable
+	SDAPU = 1;  //PULL HIGH Enable
+	SDAC  = 1;  //SET TO INPUT
+	ACK = SDA;
+	GCC_DELAY(10);
+	return ACK;
+	
 }
 
 

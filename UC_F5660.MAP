@@ -1,63 +1,64 @@
 
 Linker Version 8.7.7.190806
-Input Object File: C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ
-Input Object File: C:\HT-3000\UC_F5660\STARTUP1_L.OBJ
-Input Object File: C:\HT-3000\UC_F5660\UC_I2C.OBJ
-Input Object File: C:\HT-3000\UC_F5660\HT8_TIMEBASE.OBJ
-Input Object File: C:\HT-3000\UC_F5660\HT8_IT.OBJ
+Input Object File: C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ
+Input Object File: C:\UC_MCU-Develop\STARTUP1_L.OBJ
+Input Object File: C:\UC_MCU-Develop\UC_I2C.OBJ
+Input Object File: C:\UC_MCU-Develop\HT8_TIMEBASE.OBJ
+Input Object File: C:\UC_MCU-Develop\HT8_IT.OBJ
 
-Input Library File: D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
-Input Library File: D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
+Input Library File: D:\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: D:\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
 
 
      Bank    Start     End      Length     Class    AvgIns    Name
-     00h     0000h     0001h    0002h      CODE               @code (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     0004h     0004h    0001h      CODE               @INT0_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
-     00h     0008h     0008h    0001h      CODE               @INT1_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
-     00h     000ch     000ch    0001h      CODE               @Timer0_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
-     00h     0010h     0010h    0001h      CODE               @ADC_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
-     00h     0014h     0014h    0001h      CODE               @TB0_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
-     00h     0018h     0018h    0001h      CODE               @TB1_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
-     00h     001ch     001ch    0001h      CODE               @LVD_EEPROM_UART_SIM_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
-     00h     0020h     0020h    0001h      CODE               @I2CTO_Timer1_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
-     00h     0024h     0024h    0001h      CODE               @Timer2_Timer3_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
-     00h     0028h     0028h    0001h      CODE               @COMP0_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
-     00h     002ch     002ch    0001h      CODE               @COMP1_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
-     00h     0030h     0030h    0001h      CODE               @INT2_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
-     00h     0034h     0034h    0001h      CODE               @INT3_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
-     00h     0035h     0057h    0023h      CODE               @start (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     0058h     0061h    000ah      CODE               __DELAYX (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0062h     007ch    001bh      CODE               _i2c_stop (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     007dh     0091h    0015h      CODE               _i2c_read_ACK (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     0092h     00b3h    0022h      CODE               _i2c_write (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     00b4h     00beh    000bh      CODE               _i2c_start (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     00bfh     00c9h    000bh      CODE               _i2c_init (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     00cah     0130h    0067h      CODE               _init_HT16K33 (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     0131h     0136h    0006h      CODE               _UC_HT16K33 (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     0137h     013dh    0007h      CODE               _TimeBase_Init (C:\HT-3000\UC_F5660\HT8_TIMEBASE.OBJ)
-     00h     013eh     0142h    0005h      CODE               _main (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     0143h     0146h    0004h      CODE               @ROMDATA_BASE (C:\HT-3000\UC_F5660\STARTUP1_L.OBJ)
-     00h     0080h     0080h    0001h      DATA     50        @data_ra (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0083h     0083h    0001h      DATA     2         @HCCINIT_ACK (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
+     00h     0000h     0001h    0002h      CODE               @code (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0004h     0004h    0001h      CODE               @INT0_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
+     00h     0008h     0008h    0001h      CODE               @INT1_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
+     00h     000ch     000ch    0001h      CODE               @Timer0_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
+     00h     0010h     0010h    0001h      CODE               @ADC_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
+     00h     0014h     0014h    0001h      CODE               @TB0_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
+     00h     0018h     0018h    0001h      CODE               @TB1_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
+     00h     001ch     001ch    0001h      CODE               @LVD_EEPROM_UART_SIM_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
+     00h     0020h     0020h    0001h      CODE               @I2CTO_Timer1_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
+     00h     0024h     0024h    0001h      CODE               @Timer2_Timer3_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
+     00h     0028h     0028h    0001h      CODE               @COMP0_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
+     00h     002ch     002ch    0001h      CODE               @COMP1_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
+     00h     0030h     0030h    0001h      CODE               @INT2_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
+     00h     0034h     0034h    0001h      CODE               @INT3_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
+     00h     0035h     0057h    0023h      CODE               @start (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0058h     0061h    000ah      CODE               __DELAYX (D:\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0062h     006ch    000bh      CODE               _i2c_stop (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     006dh     007ah    000eh      CODE               _i2c_read_ACK (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     007bh     009ch    0022h      CODE               _i2c_write (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     009dh     00a7h    000bh      CODE               _i2c_start (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     00a8h     00b2h    000bh      CODE               _i2c_init (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     00b3h     0119h    0067h      CODE               _init_HT16K33 (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     011ah     011fh    0006h      CODE               _UC_HT16K33 (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0120h     0126h    0007h      CODE               _TimeBase_Init (C:\UC_MCU-Develop\HT8_TIMEBASE.OBJ)
+     00h     0127h     0136h    0010h      CODE               _main (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0137h     013ah    0004h      CODE               @ROMDATA_BASE (C:\UC_MCU-Develop\STARTUP1_L.OBJ)
+     00h     0080h     0080h    0001h      DATA     50        @data_ra (D:\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     2         @HCCINIT_Receive_ACK (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0084h     0084h    0001h      DATA     2         @HCCINIT_ACK (C:\UC_MCU-Develop\UC_I2C.OBJ)
 
      Local Sections
 
      Bank    Start     End      Length     Class    AvgIns    Name
-     00h     0083h     0083h    0000h      LOCAL    0         @dummy (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     0083h     0083h    0000h      LOCAL    0         _main (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     0081h     0081h    0000h      LOCAL    0         _TimeBase_Init (C:\HT-3000\UC_F5660\HT8_TIMEBASE.OBJ)
-     00h     0083h     0083h    0000h      LOCAL    0         _UC_HT16K33 (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     0082h     0082h    0001h      LOCAL    3         _init_HT16K33 (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     0081h     0081h    0000h      LOCAL    0         _i2c_init (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     0081h     0081h    0000h      LOCAL    0         __DELAYX (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0081h     0081h    0000h      LOCAL    0         _i2c_start (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     0081h     0081h    0001h      LOCAL    4         _i2c_write (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     0081h     0081h    0000h      LOCAL    0         _i2c_read_ACK (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     0081h     0081h    0000h      LOCAL    0         _i2c_stop (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         @dummy (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         _main (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0081h     0081h    0000h      LOCAL    0         _TimeBase_Init (C:\UC_MCU-Develop\HT8_TIMEBASE.OBJ)
+     00h     0081h     0081h    0000h      LOCAL    0         __DELAYX (D:\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0000h      LOCAL    0         _UC_HT16K33 (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0082h     0082h    0001h      LOCAL    3         _init_HT16K33 (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0081h     0081h    0000h      LOCAL    0         _i2c_init (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     0081h     0081h    0000h      LOCAL    0         _i2c_start (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     0081h     0081h    0001h      LOCAL    4         _i2c_write (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     0081h     0081h    0000h      LOCAL    0         _i2c_read_ACK (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     0081h     0081h    0000h      LOCAL    0         _i2c_stop (C:\UC_MCU-Develop\UC_I2C.OBJ)
 
      Public Symbols Information
      Address            Public by Name
-     0083h              _ACK
+     0084h              _ACK
      0010h              _ADC_ISR
      0028h              _COMP0_ISR
      002ch              _COMP1_ISR
@@ -67,12 +68,13 @@ Input Library File: D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LI
      0030h              _INT2_ISR
      0034h              _INT3_ISR
      001ch              _LVD_EEPROM_UART_SIM_ISR
+     0083h              _Receive_ACK
      0014h              _TB0_ISR
      0018h              _TB1_ISR
-     0137h              _TimeBase_Init
+     0120h              _TimeBase_Init
      000ch              _Timer0_ISR
      0024h              _Timer2_Timer3_ISR
-     0131h              _UC_HT16K33
+     011ah              _UC_HT16K33
      005eh              __DELAYX0
      005dh              __DELAYX1
      005ch              __DELAYX2
@@ -80,15 +82,15 @@ Input Library File: D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LI
      005ah              __DELAYX4
      0059h              __DELAYX5
      0058h              __DELAYX6
-     00bfh              _i2c_init
-     007dh              _i2c_read_ACK
-     00b4h              _i2c_start
+     00a8h              _i2c_init
+     006dh              _i2c_read_ACK
+     009dh              _i2c_start
      0062h              _i2c_stop
-     0092h              _i2c_write
-     00cah              _init_HT16K33
-     013eh              _main
+     007bh              _i2c_write
+     00b3h              _init_HT16K33
+     0127h              _main
      0080h              ra
-     0142h              startup_value_1
+     0136h              startup_value_1
 
      Address            Public by Value
      0004h              _INT0_ISR
@@ -112,28 +114,29 @@ Input Library File: D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LI
      005dh              __DELAYX1
      005eh              __DELAYX0
      0062h              _i2c_stop
-     007dh              _i2c_read_ACK
+     006dh              _i2c_read_ACK
+     007bh              _i2c_write
      0080h              ra
-     0083h              _ACK
-     0092h              _i2c_write
-     00b4h              _i2c_start
-     00bfh              _i2c_init
-     00cah              _init_HT16K33
-     0131h              _UC_HT16K33
-     0137h              _TimeBase_Init
-     013eh              _main
-     0142h              startup_value_1
+     0083h              _Receive_ACK
+     0084h              _ACK
+     009dh              _i2c_start
+     00a8h              _i2c_init
+     00b3h              _init_HT16K33
+     011ah              _UC_HT16K33
+     0120h              _TimeBase_Init
+     0127h              _main
+     0136h              startup_value_1
 
 
 ROM Usage Statistics
     Bank      Size      Used     Percentage
-     00h       2000h     0121h    3%
+     00h       2000h     0115h    3%
      01h       2000h     0000h    0%
-     Total     4000h     0121h    1%
+     Total     4000h     0115h    1%
 
 RAM Usage Statistics
     Bank      Size      Used     Percentage
-     00h       0080h     0004h    3%
+     00h       0080h     0005h    3%
      02h       0080h     0000h    0%
      03h       0080h     0000h    0%
      04h       0080h     0000h    0%
@@ -141,17 +144,18 @@ RAM Usage Statistics
      06h       0080h     0000h    0%
      07h       0080h     0000h    0%
      08h       0080h     0000h    0%
-     Total     0400h     0004h    0%
+     Total     0400h     0005h    0%
 
 Use Stack Count
 _main: 4
-_HT16K33_LED_ON: 1
-_i2c_ACK_check: 1
+_HT16K33_LED_ON: 2
+_i2c_ACK_check: 2
 
 Call Tree
     @dummy
         _main (0)
             _TimeBase_Init (1)
+            __DELAYX (1)
             _UC_HT16K33 (1)
                 _init_HT16K33 (2)
                     _i2c_init (3)
@@ -159,6 +163,7 @@ Call Tree
                     _i2c_start (3)
                     _i2c_write (3)
                     _i2c_read_ACK (3)
+                        __DELAYX (4)
                     _i2c_stop (3)
                     __DELAYX (3)
                 __DELAYX (2)
@@ -166,13 +171,15 @@ Call Tree
         _i2c_start (0)
         _i2c_write (0)
         _i2c_read_ACK (0)
+            __DELAYX (1)
         _i2c_stop (0)
     _i2c_ACK_check
         _i2c_start (0)
         _i2c_write (0)
         _i2c_read_ACK (0)
+            __DELAYX (1)
         __DELAYX (0)
 
-HLINK: Program entry point at section '@code' (address 0) of file 'C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ'
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ'
 
 Total 0 error(s), Total 0 Warning(s)

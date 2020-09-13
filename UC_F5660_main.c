@@ -9,16 +9,23 @@ void UC_Watchdog(bool Watchdog);
 void init_HT16K33();
 void HT16K33_LED_ON();
 
-
+u8 Receive_ACK = 1;
 void main()
 {	
-
+	
 	UC_Watchdog(0);
 	
 	TimeBase_Init();
-	//TB_ENABLE();
-	
+	TB_ENABLE();
+	/*
+	SCLPU = 1;  //PULL HIGH Enable
+	SDAPU = 1;  //PULL HIGH Enable
+	SDAC  = 1;  //SET TO INPUT
+	Receive_ACK = SDA;
+	GCC_DELAY(10);
+	*/
 	UC_HT16K33();
+	
 	
 }
 
@@ -27,7 +34,7 @@ void UC_HT16K33()
 {
 	init_HT16K33();
 	GCC_DELAY(20);
-	//HT16K33_LED_ON();
+	HT16K33_LED_ON();
 }
 
 
@@ -41,7 +48,7 @@ void init_HT16K33(void)
 	if(i2c_read_ACK() == 0) 
 	{
 		
-		i2c_write(HT16K33_Display_ON);
+		i2c_write(HT16K33_Turn_ON);
 		if(i2c_read_ACK() == 0)
 		{
 			i2c_stop();

@@ -11,7 +11,7 @@ void i2c_write(u8 i2c_buffer);
 u8 i2c_ACK_check(u8 ctrl_byte);
 
 //HT16K33 Command
-#define HT16K33_write 0b11100000
+#define HT16K33_write 0b11000000
 #define HT16K33_Turn_ON_OFF 0x20
 #define HT16K33_Turn_ON 0x21
 

@@ -75,7 +75,7 @@
 /* end of select TimeBase1 time-out period */
 
 
-/** TimeBase initialization functionï¼Œyou can select 
+/** TimeBase initialization function¡Ayou can select 
   * TimeBase clock,TimeBase0 time-out period and TimeBase1 time-out period
   * in TimeBase.h.
   */
