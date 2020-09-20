@@ -8,23 +8,27 @@ void UC_HT16K33();
 void UC_Watchdog(bool Watchdog);
 void init_HT16K33();
 void HT16K33_LED_ON();
+void clear();
+void show();
+void blank();
 
-u8 Receive_ACK = 1;
+u16  display_Buffer[8];
+u8 CheckAddressCnt = RETERY_TIMES;
+
 void main()
 {	
 	
 	UC_Watchdog(0);
 	
 	TimeBase_Init();
+	TB_fsub();
 	TB_ENABLE();
-	/*
-	SCLPU = 1;  //PULL HIGH Enable
-	SDAPU = 1;  //PULL HIGH Enable
-	SDAC  = 1;  //SET TO INPUT
-	Receive_ACK = SDA;
-	GCC_DELAY(10);
-	*/
 	UC_HT16K33();
+	
+	while(1)
+	{
+		HT16K33_LED_ON();		
+	}
 	
 	
 }
@@ -34,145 +38,267 @@ void UC_HT16K33()
 {
 	init_HT16K33();
 	GCC_DELAY(20);
-	HT16K33_LED_ON();
 }
 
-
+//
 void init_HT16K33(void)
 {
 	i2c_init();
+	u8 CheckAddressCnt = RETERY_TIMES;
 	
-	//Turn ON Display
-	i2c_start();
-	i2c_write(HT16K33_write);    //Tx 16k33 address
-	if(i2c_read_ACK() == 0) 
+	//Turn ON Display 0x21
+	while(CheckAddressCnt > 0)
 	{
-		
-		i2c_write(HT16K33_Turn_ON);
-		if(i2c_read_ACK() == 0)
+		//Turn ON Display
+		i2c_start();
+		i2c_write(HT16K33_write);    //Tx 16k33 address
+		if(i2c_read_ACK() == 0) 
 		{
-			i2c_stop();
-		}
 			
-	}
-	//SET to ROW output
-	i2c_start();
-	i2c_write(HT16K33_write);
-	if(i2c_read_ACK() == 0)
-	{
-		i2c_write(HT16K33_Set_Row_Output);
-		if(i2c_read_ACK() == 0)
-		{
+			i2c_write(HT16K33_Turn_ON);
+			if(i2c_read_ACK() == 0)
+				{
+					i2c_stop();
+					break;
+				}else{
+					i2c_stop();
+					GCC_DELAY(10);
+					return;
+				}				
+		}else{
 			i2c_stop();
+			GCC_DELAY(10);
+			CheckAddressCnt--;
 		}
 	}
-	
-	i2c_start();
-	i2c_write(HT16K33_write);
-	if(i2c_read_ACK() == 0)
-	{	
-		i2c_write(HT16K33_Set_duty_16);
-		if(i2c_read_ACK() == 0)
-		{
-			i2c_stop();
-		}		
-	}
+	GCC_DELAY(10);
 	
 	
-	i2c_start();
-	i2c_write(HT16K33_write);
-	if(i2c_read_ACK() == 0)
+	CheckAddressCnt = RETERY_TIMES;
+	//SET to ROW output 0xA0
+	while(CheckAddressCnt > 0)
 	{
-			i2c_write(HT16K33_Display_OFF);
+		//SET to ROW output
+		i2c_start();
+		i2c_write(HT16K33_write);    //Tx 16k33 address
+		if(i2c_read_ACK() == 0) 
+		{
+			
+			i2c_write(HT16K33_Set_duty_16);
 			if(i2c_read_ACK() == 0)
 			{
 				i2c_stop();
-			}	
-	}
-	
-	i2c_start();
-	i2c_write(HT16K33_write);
-	if(i2c_read_ACK() == 0)
-	{
-		i2c_write(HT16K33_RAM);
-		if(i2c_read_ACK() == 0)
-		{
-			int i =0;
-			for(i=0;i<12;i++)
-			{
-				if(i2c_read_ACK() == 1)
-				{
-					GCC_DELAY(100);
-				}
-				else
-				{
-					i2c_write(0xFF);
-				}
-			} 
-			i2c_stop();
+				break;
+			}else{
+				i2c_stop();
+				GCC_DELAY(10);
+				return;
+			}
 				
+		}else{
+			i2c_stop();
+			GCC_DELAY(10);
+			CheckAddressCnt--;
 		}
 		
 	}
+	GCC_DELAY(10);
 	
-	i2c_start();
-	i2c_write(HT16K33_write);
-	if(i2c_read_ACK() == 0)
+	CheckAddressCnt = RETERY_TIMES;
+	//SET to ROW output 0xA0
+	while(CheckAddressCnt > 0)
 	{
+		//SET to ROW output
+		i2c_start();
+		i2c_write(HT16K33_write);    //Tx 16k33 address
+		if(i2c_read_ACK() == 0) 
+		{
+			
+			i2c_write(HT16K33_Set_Row_Output);
+			if(i2c_read_ACK() == 0)
+			{
+				i2c_stop();
+				break;
+			}else{
+				i2c_stop();
+				GCC_DELAY(10);
+				return;
+			}
+				
+		}else{
+			i2c_stop();
+			GCC_DELAY(10);
+			CheckAddressCnt--;
+		}
+		
+	}
+	GCC_DELAY(10);
+	
+	
+	CheckAddressCnt = RETERY_TIMES;
+	//Display ON 0x81
+	while(CheckAddressCnt > 0)
+	{
+		//SET to ROW output
+		i2c_start();
+		i2c_write(HT16K33_write);    //Tx 16k33 address
+		if(i2c_read_ACK() == 0) 
+		{
+			
 			i2c_write(HT16K33_Display_ON);
 			if(i2c_read_ACK() == 0)
 			{
 				i2c_stop();
-			}	
+				break;
+			}else{
+				i2c_stop();
+				GCC_DELAY(10);
+				return;
+			}
+				
+		}else{
+			i2c_stop();
+			GCC_DELAY(10);
+			CheckAddressCnt--;
+		}
+		
 	}
-	
+	GCC_DELAY(10);		
+			
 }
+	
 
 				
 			
 				
 
 void HT16K33_LED_ON()
-{
-
-	i2c_start();
-	i2c_write(HT16K33_write);
-	if(i2c_read_ACK() == 0)
+{	
+	int i=0;
+	for(i=0;i<8;i++)
 	{
-		i2c_write(0x00);
-		if(i2c_read_ACK() == 0)
+		int k=0;
+		for(k=0 ; k<16; k++)
 		{
-			u8 i;
-			for(i=0;i<6;i++)
-			{
-				i2c_write(0xFF);
-				if(i2c_read_ACK() == 0)
-				{
-					i2c_write(0x03);
-				}	
-			}
-		}
-			
+			display_Buffer[i] = 1 << k;	
+			show();
+			GCC_DELAY(10);
+		}		
+		clear();
 	}
 	
-	i2c_start();
-	i2c_write(HT16K33_write);
-	if(i2c_read_ACK() == 0) 
+	i = 0;
+	for(i=0; i<8;i++)
 	{
-		i2c_write(HT16K33_Display_ON_OFF);
-		if(i2c_read_ACK() == 0)
+		int k=0;
+		for(k=0 ; k<16 ; k++)
 		{
-			i2c_write(HT16K33_Display_ON);
-			if(i2c_read_ACK() == 0)
+			display_Buffer[i] |= 1 << k;
+			show();
+			GCC_DELAY(10);	
+		}
+	}
+	
+	blank();
+}
+
+
+void clear()
+{
+	int i;
+	for(i=0 ; i<8 ; i++)
+	{
+		display_Buffer[i] = 0;	
+	} 	
+	
+}
+
+
+//show break error
+void show()
+{
+	CheckAddressCnt = RETERY_TIMES;
+	//Display OFF 0x81
+	while(CheckAddressCnt > 0)
+	{
+		//SET to ROW output
+		i2c_start();
+		i2c_write(HT16K33_write);    //Tx 16k33 address
+		if(i2c_read_ACK() == 0) 
+		{
+			int i;
+			for(i=0; i<8 ; i++)
 			{
-				i2c_stop();
-			}
+				i2c_write(display_Buffer[i] & 0xFF);
+				if(i2c_read_ACK() == 0)
+				{
+					i2c_write(display_Buffer[i] >> 8);
+					if(i2c_read_ACK() == 0)
+					{
+						i2c_stop();
+						return;						
+					}else{
+						i2c_stop();
+						GCC_DELAY(10);
+						return;
+					}
+					
+				}else{
+					i2c_stop();
+					GCC_DELAY(10);
+					return;
+				}
+			
+			}		
+		}else{
+			i2c_stop();
+			GCC_DELAY(10);
+			CheckAddressCnt--;
 		}
 		
 	}
+	GCC_DELAY(10);
+}
 	
+	
+void blank()
+{
+	CheckAddressCnt = RETERY_TIMES;
+	//Display ON 0x81
+	while(CheckAddressCnt > 0)
+	{
+		//SET to ROW output
+		i2c_start();
+		i2c_write(HT16K33_write);    //Tx 16k33 address
+		if(i2c_read_ACK() == 0) 
+		{
+			
+			i2c_write(HT16K33_Display_ON);
+			if(i2c_read_ACK() == 0)
+			{
+				break;
+			}else{
+				i2c_stop();
+				GCC_DELAY(10);
+				return;
+			}
+				
+		}else{
+			i2c_stop();
+			GCC_DELAY(10);
+			CheckAddressCnt--;
+		}
+		
+	}
+	i2c_stop();
+	GCC_DELAY(10);
 	
 }
+	
+	
+	
+
+
 
 void UC_Watchdog(bool Watchdog)
 {   // 1:enable  0:disable 

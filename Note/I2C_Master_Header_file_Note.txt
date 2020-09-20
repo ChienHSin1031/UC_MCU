@@ -1,8 +1,8 @@
 /**
   ******************************************************************************
-  * @file HT8_TimeBase.h
-  * @brief The header file of the TimeBase library.
-  * @author Holtek Semiconductor Inc
+  * @file HT8_I2C_Master.h
+  * @brief The header file of the I2C Master library.
+  * @author Holtek Semiconductor Inc.
   * @version V1.0.0
   * @date 2019-05-28
   ******************************************************************************
@@ -27,64 +27,71 @@
   * <h2><center>Copyright (C) Holtek Semiconductor Inc. All rights reserved</center></h2>
   ************************************************************************************************************/
 
-
 /* Define to prevent recursive inclusion -------------------------------------*/
 
-#ifndef _HT8_TimeBase_H_
-#define _HT8_TimeBase_H_
+#ifndef _HT8_I2C_Master_h_
+#define	_HT8_I2C_Master_h_
 
 #include "HT8_MCU_IP_SEL.h"
 
-#define		TB_ENABLE()					_tbon = 1
-#define		TB_DISABLE()				_tbon = 0
+/***** I2C SCL select PC0 *****/
+#define	SCL			_pc0
+#define	SCLC		_pcc0
+#define	SCLPU		_pcpu0
 
-#define     TB_fsub()                   _tbck = 0
-
-#define		TB0_ISR_ENABLE()			_tb0e = 1
-#define		TB0_ISR_DISABLE()			_tb0e = 0
-#define		TB0_SET_FLAG()				_tb0f = 1
-#define		TB0_CLEAR_FLAG()			_tb0f = 0
-#define		TB0_FLAG()					_tb0f
-
-#define		TB1_ISR_ENABLE()			_tb1e = 1
-#define		TB1_ISR_DISABLE()			_tb1e = 0
-#define		TB1_SET_FLAG()				_tb1f = 1
-#define		TB1_CLEAR_FLAG()			_tb1f = 0
-#define		TB1_FLAG()					_tb1f
-
-/*********** select TimeBase clock *************/
-	#define		TB_CLOCK_FSUB			(1)
-//	#define		TB_CLOCK_FSYS_DIV4		(1)
-//end of select TimeBase clock
-
-/******** select TimeBase0 time-out period  *********/ 
-//	#define		TB0_Period_2_8			(1)
-//	#define		TB0_Period_2_9			(1)
-//	#define		TB0_Period_2_10			(1)
-//	#define		TB0_Period_2_11			(1)
-	#define		TB0_Period_2_12			(1)
-//	#define		TB0_Period_2_13			(1)
-//	#define		TB0_Period_2_14			(1)
-//	#define		TB0_Period_2_15			(1)
-/* end of select TimeBase0 time-out period */
+/***** I2C SDA select PC3 *****/
+#define	SDA			_pc3
+#define	SDAC		_pcc3
+#define	SDAPU		_pcpu3
 
 
-/******** select TimeBase1 time-out period  *********/ 
-	#define		TB1_Period_2_12			(1)
-//	#define		TB1_Period_2_13			(1)
-//	#define		TB1_Period_2_14			(1)
-//	#define		TB1_Period_2_15			(1)
-/* end of select TimeBase1 time-out period */
+#define DatHi()		SDAC=1,SDAPU=1  
+#define DatLo()		SDAC=0,SDA=0
+
+#define DATA_NUM			4
+
+#define ACK					0		//ACK
+#define NACK				1		//NACK
+#define RETRY_TIMES			5		//retry times
+#define I2CSP				50		//V3 compiler,system clock 9.8304MHz,I2C speed is 20Kbps,最小為18
+
+#define	I2CFAIL_CNT			10	
+#define	SLAVER_ADDRESS		0XC0	//Slave Address 0b11100000   original 0X72 , 0xC0 HT16K33  slave address 
+#define	COMMEND_WORK_ID		0X11	//command Byte
+
+
+typedef union
+{
+	struct
+	{      
+		u8	ACK_Flag 		:1;
+		u8	nc1				:1;
+		u8	nc2				:1;
+		u8	nc3				:1;
+		u8	nc4				:1;
+		u8	nc5				:1;
+		u8	nc6				:1;
+		u8  nc7				:1;
+	}Bit;    
+	u8 Byte;    
+}_I2C_Flag;
+
+extern volatile _I2C_Flag	I2C_Flag;
+
+extern u8 Tx_Buff[DATA_NUM];	//I2C master transmit buff
+extern u8 Tx_Data[DATA_NUM];	//I2C master transmit data
 
 
 
-/** TimeBase initialization function�Ayou can select 
-  * TimeBase clock,TimeBase0 time-out period and TimeBase1 time-out period
-  * in TimeBase.h.
-  */
-void TimeBase_Init(void);
+void I2C_Master_Init();
+void I2C_Start();
+void I2C_Stop();
+void Wr_Byte(u8 I2CData);
+u8 Rd_Byte(void);
+void I2C_Write();
+void I2C_Read(u8 *prt2,u8 cnt);
 
 
-#endif//end of _HT8_TimeBase_H_
+#endif
 
 /******************* (C) COPYRIGHT 2019 Holtek Semiconductor Inc *****END OF FILE****/

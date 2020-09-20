@@ -13,6 +13,7 @@ Input Library File: D:\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
      Bank    Start     End      Length     Class    AvgIns    Name
      00h     0000h     0001h    0002h      CODE               @code (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
      00h     0004h     0004h    0001h      CODE               @INT0_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
+     00h     0005h     0007h    0003h      CODE               _CROM2PROM (CROM2PROM)
      00h     0008h     0008h    0001h      CODE               @INT1_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
      00h     000ch     000ch    0001h      CODE               @Timer0_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
      00h     0010h     0010h    0001h      CODE               @ADC_ISR_code (C:\UC_MCU-Develop\HT8_IT.OBJ)
@@ -28,53 +29,70 @@ Input Library File: D:\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
      00h     0035h     0057h    0023h      CODE               @start (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
      00h     0058h     0061h    000ah      CODE               __DELAYX (D:\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0062h     006ch    000bh      CODE               _i2c_stop (C:\UC_MCU-Develop\UC_I2C.OBJ)
-     00h     006dh     007ah    000eh      CODE               _i2c_read_ACK (C:\UC_MCU-Develop\UC_I2C.OBJ)
-     00h     007bh     009ch    0022h      CODE               _i2c_write (C:\UC_MCU-Develop\UC_I2C.OBJ)
-     00h     009dh     00a7h    000bh      CODE               _i2c_start (C:\UC_MCU-Develop\UC_I2C.OBJ)
-     00h     00a8h     00b2h    000bh      CODE               _i2c_init (C:\UC_MCU-Develop\UC_I2C.OBJ)
-     00h     00b3h     0119h    0067h      CODE               _init_HT16K33 (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
-     00h     011ah     011fh    0006h      CODE               _UC_HT16K33 (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
-     00h     0120h     0126h    0007h      CODE               _TimeBase_Init (C:\UC_MCU-Develop\HT8_TIMEBASE.OBJ)
-     00h     0127h     0136h    0010h      CODE               _main (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
-     00h     0137h     013ah    0004h      CODE               @ROMDATA_BASE (C:\UC_MCU-Develop\STARTUP1_L.OBJ)
-     00h     0080h     0080h    0001h      DATA     50        @data_ra (D:\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0083h     0083h    0001h      DATA     2         @HCCINIT_Receive_ACK (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
-     00h     0084h     0084h    0001h      DATA     2         @HCCINIT_ACK (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     006dh     007eh    0012h      CODE               _i2c_read_ACK (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     007fh     00a0h    0022h      CODE               _i2c_write (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     00a1h     00abh    000bh      CODE               _i2c_start (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     00ach     00c7h    001ch      CODE               _blank (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     00c8h     00e0h    0019h      CODE               _clear (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     00e1h     010eh    002eh      CODE               _show (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     010fh     018bh    007dh      CODE               _HT16K33_LED_ON (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     018ch     0194h    0009h      CODE               _i2c_init (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     0195h     0203h    006fh      CODE               _init_HT16K33 (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0204h     0209h    0006h      CODE               _UC_HT16K33 (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     020ah     0210h    0007h      CODE               _TimeBase_Init (C:\UC_MCU-Develop\HT8_TIMEBASE.OBJ)
+     00h     0211h     0219h    0009h      CODE               _main (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     021ah     021dh    0004h      CODE               @ROMDATA_BASE (C:\UC_MCU-Develop\STARTUP1_L.OBJ)
+     00h     0080h     0080h    0001h      DATA     34        @data_ra (D:\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     18        @data_rb (D:\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     18        @data_rc (D:\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     4         @data_rd (D:\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0084h     0084h    0001h      DATA     4         @data_re (D:\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     008ch     008ch    0001h      DATA     6         @HCCINIT_CheckAddressCnt (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     008dh     008dh    0001h      DATA     2         @HCCINIT_ACK (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     008eh     009dh    0010h      DATA     0.1875    @HCCINIT0_display_Buffer (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
 
      Local Sections
 
      Bank    Start     End      Length     Class    AvgIns    Name
-     00h     0083h     0083h    0000h      LOCAL    0         @dummy (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
-     00h     0083h     0083h    0000h      LOCAL    0         _main (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
-     00h     0081h     0081h    0000h      LOCAL    0         _TimeBase_Init (C:\UC_MCU-Develop\HT8_TIMEBASE.OBJ)
-     00h     0081h     0081h    0000h      LOCAL    0         __DELAYX (D:\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0083h     0083h    0000h      LOCAL    0         _UC_HT16K33 (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
-     00h     0082h     0082h    0001h      LOCAL    3         _init_HT16K33 (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
-     00h     0081h     0081h    0000h      LOCAL    0         _i2c_init (C:\UC_MCU-Develop\UC_I2C.OBJ)
-     00h     0081h     0081h    0000h      LOCAL    0         _i2c_start (C:\UC_MCU-Develop\UC_I2C.OBJ)
-     00h     0081h     0081h    0001h      LOCAL    4         _i2c_write (C:\UC_MCU-Develop\UC_I2C.OBJ)
-     00h     0081h     0081h    0000h      LOCAL    0         _i2c_read_ACK (C:\UC_MCU-Develop\UC_I2C.OBJ)
-     00h     0081h     0081h    0000h      LOCAL    0         _i2c_stop (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         @dummy (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _main (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0085h     0085h    0000h      LOCAL    0         _TimeBase_Init (C:\UC_MCU-Develop\HT8_TIMEBASE.OBJ)
+     00h     0087h     0087h    0000h      LOCAL    0         _UC_HT16K33 (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0086h     0086h    0001h      LOCAL    8         _init_HT16K33 (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0085h     0085h    0000h      LOCAL    0         _i2c_init (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     0085h     0085h    0000h      LOCAL    0         __DELAYX (D:\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0085h     0085h    0000h      LOCAL    0         _i2c_start (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     0085h     0085h    0001h      LOCAL    4         _i2c_write (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     0085h     0085h    0000h      LOCAL    0         _i2c_read_ACK (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     0085h     0085h    0000h      LOCAL    0         _i2c_stop (C:\UC_MCU-Develop\UC_I2C.OBJ)
+     00h     0086h     008bh    0006h      LOCAL    6.6667    _HT16K33_LED_ON (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0086h     0086h    0000h      LOCAL    0         _show (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0085h     0085h    0000h      LOCAL    0         _clear (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
+     00h     0085h     0085h    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     0086h     0086h    0000h      LOCAL    0         _blank (C:\UC_MCU-Develop\UC_F5660_MAIN.OBJ)
 
      Public Symbols Information
      Address            Public by Name
-     0084h              _ACK
+     008dh              _ACK
      0010h              _ADC_ISR
      0028h              _COMP0_ISR
      002ch              _COMP1_ISR
+     008ch              _CheckAddressCnt
+     0006h              _Crom2Prom
+     0005h              _Crom2PromNext
+     010fh              _HT16K33_LED_ON
      0020h              _I2CTO_Timer1_ISR
      0004h              _INT0_ISR
      0008h              _INT1_ISR
      0030h              _INT2_ISR
      0034h              _INT3_ISR
      001ch              _LVD_EEPROM_UART_SIM_ISR
-     0083h              _Receive_ACK
      0014h              _TB0_ISR
      0018h              _TB1_ISR
-     0120h              _TimeBase_Init
+     020ah              _TimeBase_Init
      000ch              _Timer0_ISR
      0024h              _Timer2_Timer3_ISR
-     011ah              _UC_HT16K33
+     0204h              _UC_HT16K33
      005eh              __DELAYX0
      005dh              __DELAYX1
      005ch              __DELAYX2
@@ -82,18 +100,28 @@ Input Library File: D:\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
      005ah              __DELAYX4
      0059h              __DELAYX5
      0058h              __DELAYX6
-     00a8h              _i2c_init
+     00ach              _blank
+     00c8h              _clear
+     008eh              _display_Buffer
+     018ch              _i2c_init
      006dh              _i2c_read_ACK
-     009dh              _i2c_start
+     00a1h              _i2c_start
      0062h              _i2c_stop
-     007bh              _i2c_write
-     00b3h              _init_HT16K33
-     0127h              _main
+     007fh              _i2c_write
+     0195h              _init_HT16K33
+     0211h              _main
+     00e1h              _show
      0080h              ra
-     0136h              startup_value_1
+     0081h              rb
+     0082h              rc
+     0083h              rd
+     0084h              re
+     0219h              startup_value_1
 
      Address            Public by Value
      0004h              _INT0_ISR
+     0005h              _Crom2PromNext
+     0006h              _Crom2Prom
      0008h              _INT1_ISR
      000ch              _Timer0_ISR
      0010h              _ADC_ISR
@@ -115,28 +143,37 @@ Input Library File: D:\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
      005eh              __DELAYX0
      0062h              _i2c_stop
      006dh              _i2c_read_ACK
-     007bh              _i2c_write
+     007fh              _i2c_write
      0080h              ra
-     0083h              _Receive_ACK
-     0084h              _ACK
-     009dh              _i2c_start
-     00a8h              _i2c_init
-     00b3h              _init_HT16K33
-     011ah              _UC_HT16K33
-     0120h              _TimeBase_Init
-     0127h              _main
-     0136h              startup_value_1
+     0081h              rb
+     0082h              rc
+     0083h              rd
+     0084h              re
+     008ch              _CheckAddressCnt
+     008dh              _ACK
+     008eh              _display_Buffer
+     00a1h              _i2c_start
+     00ach              _blank
+     00c8h              _clear
+     00e1h              _show
+     010fh              _HT16K33_LED_ON
+     018ch              _i2c_init
+     0195h              _init_HT16K33
+     0204h              _UC_HT16K33
+     020ah              _TimeBase_Init
+     0211h              _main
+     0219h              startup_value_1
 
 
 ROM Usage Statistics
     Bank      Size      Used     Percentage
-     00h       2000h     0115h    3%
+     00h       2000h     01fbh    6%
      01h       2000h     0000h    0%
-     Total     4000h     0115h    1%
+     Total     4000h     01fbh    3%
 
 RAM Usage Statistics
     Bank      Size      Used     Percentage
-     00h       0080h     0005h    3%
+     00h       0080h     001eh    23%
      02h       0080h     0000h    0%
      03h       0080h     0000h    0%
      04h       0080h     0000h    0%
@@ -144,18 +181,16 @@ RAM Usage Statistics
      06h       0080h     0000h    0%
      07h       0080h     0000h    0%
      08h       0080h     0000h    0%
-     Total     0400h     0005h    0%
+     Total     0400h     001eh    2%
 
 Use Stack Count
 _main: 4
-_HT16K33_LED_ON: 2
 _i2c_ACK_check: 2
 
 Call Tree
     @dummy
         _main (0)
             _TimeBase_Init (1)
-            __DELAYX (1)
             _UC_HT16K33 (1)
                 _init_HT16K33 (2)
                     _i2c_init (3)
@@ -167,12 +202,25 @@ Call Tree
                     _i2c_stop (3)
                     __DELAYX (3)
                 __DELAYX (2)
-    _HT16K33_LED_ON
-        _i2c_start (0)
-        _i2c_write (0)
-        _i2c_read_ACK (0)
-            __DELAYX (1)
-        _i2c_stop (0)
+            _HT16K33_LED_ON (1)
+                _show (2)
+                    _i2c_start (3)
+                    _i2c_write (3)
+                    _i2c_read_ACK (3)
+                        __DELAYX (4)
+                    _i2c_stop (3)
+                    __DELAYX (3)
+                __DELAYX (2)
+                _clear (2)
+                _Crom2Prom (2)
+                _Crom2Prom (2)
+                _blank (2)
+                    _i2c_start (3)
+                    _i2c_write (3)
+                    _i2c_read_ACK (3)
+                        __DELAYX (4)
+                    _i2c_stop (3)
+                    __DELAYX (3)
     _i2c_ACK_check
         _i2c_start (0)
         _i2c_write (0)
