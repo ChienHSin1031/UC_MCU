@@ -19,7 +19,7 @@ u8 i2c_ACK_check(u8 ctrl_byte);
 #define HT16K33_Display_OFF 0x80
 #define HT16K33_Display_ON 0x81
 
-#define HT16K33_Select_Row_INT 0xA0
+#define HT16K33_Select_Row_INT 0xA1
 #define HT16K33_Set_Row_Output 0xA1
 
 #define HT16K33_Set_duty 0xEF

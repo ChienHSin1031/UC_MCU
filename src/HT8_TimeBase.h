@@ -38,8 +38,6 @@
 #define		TB_ENABLE()					_tbon = 1
 #define		TB_DISABLE()				_tbon = 0
 
-#define     TB_fsub()                   _tbck = 0
-
 #define		TB0_ISR_ENABLE()			_tb0e = 1
 #define		TB0_ISR_DISABLE()			_tb0e = 0
 #define		TB0_SET_FLAG()				_tb0f = 1
