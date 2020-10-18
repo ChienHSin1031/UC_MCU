@@ -1,0 +1,19 @@
+HT67F5660 Notes
+
+Oscillator selections and operation
+are selected through a combination of configuration options and registers
+振盪器的選擇和操作，通過配置選項和寄存器組合選擇
+
+The high speed oscillators are the external crystal oscillator and the internal 4.9152MHz,
+4.9152×2MHz or 4.9152×3MHz RC oscillator
+高速振盪器是外部晶體振盪器和內部4.9152MHz，4.9152×2MHz或4.9152×3MHz RC振盪器
+
+The two low speed oscillators are the internal 32kHz
+RC oscillator and the external 32.768kHz crystal oscillator
+兩個低速振盪器是內部32kHzRC振盪器和外部32.768kHz晶體振盪器
+
+Selecting whether the low or high speed
+oscillator is used as the system oscillator is implemented using the HLCLK bit and CKS2~CKS0
+bits in the SMOD register and as the system clock can be dynamically selected.
+選擇低速還是高速使用HLCLK位和CKS2〜CKS0實現系統振盪器時使用振盪器，
+可以動態選擇SMOD寄存器中的位以及系統時鐘。

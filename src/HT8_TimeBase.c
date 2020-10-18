@@ -36,6 +36,22 @@
   * @brief Initializes the TimeBase peripheral according to the specified parameters
   * @retval None
   */
+  
+  
+  
+void System_Clock_Init(void)
+{
+	#ifdef Sys_Clock_FSUB  //32KHz
+	{
+	 	_hlclk = 0;  _cks2 = 0; _cks1 = 0; _cks1 = 1;	
+	}
+	#elif Sys_Clock_fH_64  //14.7456MHz / 64 = 230.4KHz 
+	{
+		_hlclk = 0;  _cks2 = 0; _cks1 = 1; _cks1 = 0;	
+	}
+	#endif
+}
+
 void TimeBase_Init(void)
 {
 /***************** TimeBase clock select *****************/
@@ -57,7 +73,7 @@ void TimeBase_Init(void)
 	#ifdef	TB0_Period_2_8		
 		{
 			/* select TimeBase0 time-out period 2^8(256)	*/
-			_tb02 = 0;	_tb01 = 0;	_tb00 = 0;
+			_tb02 = 1;	_tb01 = 0;	_tb00 = 0;
 		}	
 	#elif	TB0_Period_2_9		
 		{
@@ -121,6 +137,7 @@ void TimeBase_Init(void)
 		}
 	#endif
 /***** end of TimeBase1 time-out period select ******/
+
 
 
 }

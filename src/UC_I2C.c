@@ -13,7 +13,7 @@ void i2c_init(void)
 	SCLC = 0;	   //SCL Set Input
 	SDAPU = 1; 	   //enable SDA pull-up
     SDAC = 0;	   //SDA Set Input
-    GCC_DELAY(20);
+    GCC_DELAY(3);
 }
 
 //Start Signal SCL = 1, SDA HIGH TO DOWN
@@ -22,59 +22,39 @@ void i2c_start(void)
 	SCLC = 0;   //SCL Set to Output
 	SDAC = 0;   //SDA Set to Output
 	SDA = 1;    //SDA Set to HIGH
+	GCC_DELAY(1);
 	SCL = 1;    //SCL Set to High 
-	GCC_DELAY(5);
+	GCC_DELAY(1);
 	SDA = 0;    //Set SDA HIGH to LOW  I2C start condition
 }
 
 //Stop Signal SCL = 1, SDA 0 to 1
 void i2c_stop(void)  
 {
-	SCL = 1;
+	SCLC = 0;
+	SDAC = 0;
+	GCC_DELAY(1);
+	SCL = 0;
+	GCC_DELAY(1);
 	SDA = 0;
-	GCC_DELAY(5);
-	SDA = 1;      
+	GCC_DELAY(1);
+	SDA = 1;
+	GCC_DELAY(1);
+	SCL = 1;
+	GCC_DELAY(1);
 	
-	SCLC = 1;  //Set to Input,release the SCL
-	SDAC = 1;  //Set to Input,release the SDA
 }
-
-
-
 
 u8 i2c_read_ACK(void)
 {	
-	
-	SCL = 1;  //PULL HIGH Enable
-	SDAPU = 1;  //PULL HIGH Enable
-	GCC_DELAY(10);
 	SDAC  = 1;  //SET TO INPUT
+	SDAPU = 1;  //PULL HIGH Enable
+	SCL = 1;
 	ACK = SDA;
 	GCC_DELAY(10);
+	SCL = 0;
+	GCC_DELAY(10);
 	return ACK;
-	
-}
-
-
-u8 i2c_ACK_check(u8 ctrl_byte)
-{
-	i2c_start();
-	i2c_write(ctrl_byte);
-	if(i2c_read_ACK() == 0)
-	{
-		GCC_DELAY(30);
-		SDAC = 1;
-		SCLC = 1;
-		return 0;
-	}
-	else{
-		
-		GCC_DELAY(100);
-		return 1;
-		
-	}
-	
-	
 	
 }
 
