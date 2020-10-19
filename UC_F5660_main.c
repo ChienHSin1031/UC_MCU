@@ -18,11 +18,20 @@ u8 CheckAddressCnt = RETERY_TIMES;
 
 void main()
 {	
+//--all of close I2C Register-------
+	_sim2 = 1;
+	_sim1 = 1;
+	_sim0 = 1;
+	_ckpolb = 0;
+	_simen = 0;
+	_simtoen = 0;
+//-----------------------------------
 	System_Clock_Init();
 	UC_Watchdog(0);
 	//TimeBase_Init();
 	TB_DISABLE();
 	UC_HT16K33();
+	
 	
 }
 

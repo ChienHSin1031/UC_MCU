@@ -51,8 +51,8 @@
 #define		TB1_FLAG()					_tb1f
 
 /*********** select System clock *************/
-	//#define     Sys_Clock_FSUB()          (1) //fsub 32KHz
-	#define 	Sys_Clock_fH_64()           (1) //FH/64 = 230.4KHz
+	#define     Sys_Clock_FSUB()          (1) //fsub 32KHz
+	//#define 	Sys_Clock_fH_64()           (1) //FH/64 = 230.4KHz
 
 /*********** select TimeBase clock *************/
 	#define		TB_CLOCK_FSUB			(1)

@@ -43,7 +43,7 @@ void System_Clock_Init(void)
 {
 	#ifdef Sys_Clock_FSUB  //32KHz
 	{
-	 	_hlclk = 0;  _cks2 = 0; _cks1 = 0; _cks1 = 1;	
+	 	_hlclk |= 0;  _cks2 = 0; _cks1 = 0; _cks1 = 1, _fsyson = 0;	
 	}
 	#elif Sys_Clock_fH_64  //14.7456MHz / 64 = 230.4KHz 
 	{
