@@ -65,10 +65,10 @@ void i2c_write(u8 i2c_buffer)
 	ACK = 1;
 	u8 i =8;
 	//SCLC = 0;   //SCL Set Output
-	//SDAC = 0;	//SDA Set Output
+	SDAC = 0;	//SDA Set Output
 	while(i--)
 	{
-		SCLC = 1;
+		SCLC = 0;
 		SCL = 0;     //problem here
 		CheckStateSCL = SCL;
 		GCC_DELAY(5);	

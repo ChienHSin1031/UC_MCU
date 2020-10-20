@@ -19,14 +19,18 @@ u8 CheckAddressCnt = RETERY_TIMES;
 void main()
 {	
 //--all of close I2C Register-------
-	_sim2 = 1;
+
+/*	_sim2 = 1;
 	_sim1 = 1;
 	_sim0 = 1;
 	_ckpolb = 0;
 	_simen = 0;
 	_simtoen = 0;
+*/
 //-----------------------------------
 	System_Clock_Init();
+	
+	
 	UC_Watchdog(0);
 	//TimeBase_Init();
 	TB_DISABLE();
@@ -42,20 +46,20 @@ void UC_HT16K33()
 	GCC_DELAY(3);
 	HT16K33_LED_RAM_Clear();
 	LED_all_TURN_ON();
-	LED_COM5_TUR_ON();
+	//LED_COM5_TUR_ON();
 	blank();
 }
 
 void LED_all_TURN_ON()
 {
-	display_Buffer[0] = 0xEF01;
-	display_Buffer[1] = 0xEF01;
-	display_Buffer[2] = 0xEF01;
-	display_Buffer[3] = 0xEF01;
-	display_Buffer[4] = 0xEF01;
-	display_Buffer[5] = 0xFF01;
+	display_Buffer[0] = 0x7F01;
+	display_Buffer[1] = 0x7F01;
+	display_Buffer[2] = 0x7F01;
+	display_Buffer[3] = 0x7F01;
+	display_Buffer[4] = 0x7F01;
+	display_Buffer[5] = 0x7F01;
 	
-	//show();
+	show();
 	//blank();
 }
 
