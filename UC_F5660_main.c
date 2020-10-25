@@ -10,7 +10,6 @@ void UC_Watchdog(bool Watchdog);
 void init_HT16K33();
 void HT16K33_LED_RAM_Clear();
 void show();
-void blank();
 void LED_all_TURN_ON();
 void LED_COM5_TUR_ON();
 void Number9to0();
@@ -60,7 +59,7 @@ void main()
 		if(i==99999) i = 0;
 		show();
 		displayON();
-		GCC_DELAY(50000);
+		GCC_DELAY(100000);
 		//GCC_DELAY(263690);
 	}
 	

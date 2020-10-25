@@ -44,8 +44,8 @@ Input Library File: D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LI
      00h     0232h     0239h    0008h      CODE               _i2c_init (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
      00h     023ah     02afh    0076h      CODE               _init_HT16K33 (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
      00h     02b0h     02b6h    0007h      CODE               _UC_HT16K33 (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     02b7h     034dh    0097h      CODE               _main (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     034eh     0352h    0005h      CODE               @ROMDATA_BASE (C:\HT-3000\UC_F5660\STARTUP1_L.OBJ)
+     00h     02b7h     034bh    0095h      CODE               _main (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     034ch     0350h    0005h      CODE               @ROMDATA_BASE (C:\HT-3000\UC_F5660\STARTUP1_L.OBJ)
      00h     0080h     0080h    0001h      DATA     63        @data_ra (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0081h     0081h    0001h      DATA     42        @data_rb (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0082h     0082h    0001h      DATA     26        @data_rc (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
@@ -135,7 +135,7 @@ Input Library File: D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LI
      0082h              rc
      0083h              rd
      0084h              re
-     034eh              startup_value_1
+     034ch              startup_value_1
 
      Address            Public by Value
      0004h              _INT0_ISR
@@ -191,14 +191,14 @@ Input Library File: D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LI
      023ah              _init_HT16K33
      02b0h              _UC_HT16K33
      02b7h              _main
-     034eh              startup_value_1
+     034ch              startup_value_1
 
 
 ROM Usage Statistics
     Bank      Size      Used     Percentage
-     00h       2000h     032dh    9%
+     00h       2000h     032bh    9%
      01h       2000h     0000h    0%
-     Total     4000h     032dh    4%
+     Total     4000h     032bh    4%
 
 RAM Usage Statistics
     Bank      Size      Used     Percentage
