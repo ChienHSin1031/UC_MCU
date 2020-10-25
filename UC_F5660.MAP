@@ -13,7 +13,6 @@ Input Library File: D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LI
      Bank    Start     End      Length     Class    AvgIns    Name
      00h     0000h     0001h    0002h      CODE               @code (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
      00h     0004h     0004h    0001h      CODE               @INT0_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
-     00h     0005h     0007h    0003h      CODE               _CROM2PROM (CROM2PROM)
      00h     0008h     0008h    0001h      CODE               @INT1_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
      00h     000ch     000ch    0001h      CODE               @Timer0_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
      00h     0010h     0010h    0001h      CODE               @ADC_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
@@ -27,38 +26,42 @@ Input Library File: D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LI
      00h     0030h     0030h    0001h      CODE               @INT2_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
      00h     0034h     0034h    0001h      CODE               @INT3_ISR_code (C:\HT-3000\UC_F5660\HT8_IT.OBJ)
      00h     0035h     0057h    0023h      CODE               @start (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     0058h     0061h    000ah      CODE               __DELAYX (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0062h     006dh    000ch      CODE               _i2c_stop (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     006eh     0080h    0013h      CODE               _i2c_read_ACK (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     0081h     00b5h    0035h      CODE               _i2c_write (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     00b6h     00bch    0007h      CODE               _i2c_start (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     00bdh     00dbh    001fh      CODE               _blank (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     00dch     0128h    004dh      CODE               _show (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     0129h     0142h    001ah      CODE               _LED_all_TURN_ON (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     0143h     015ch    001ah      CODE               _HT16K33_LED_RAM_Clear (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     015dh     0164h    0008h      CODE               _i2c_init (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     0165h     01dah    0076h      CODE               _init_HT16K33 (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     01dbh     01e2h    0008h      CODE               _UC_HT16K33 (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     01e3h     01edh    000bh      CODE               _System_Clock_Init (C:\HT-3000\UC_F5660\HT8_TIMEBASE.OBJ)
-     00h     01eeh     01f3h    0006h      CODE               _main (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     01f4h     01f8h    0005h      CODE               @ROMDATA_BASE (C:\HT-3000\UC_F5660\STARTUP1_L.OBJ)
-     00h     0080h     0080h    0001h      DATA     44        @data_ra (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0081h     0081h    0001h      DATA     15        @data_rb (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0082h     0082h    0001h      DATA     14        @data_rc (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0083h     0083h    0001h      DATA     2         @data_rd (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0084h     0084h    0001h      DATA     2         @data_re (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     008ah     008ah    0001h      DATA     10        @HCCINIT_CheckAddressCnt (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     008bh     008bh    0001h      DATA     2         @HCCINIT_CheckStateSDA (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     008ch     008ch    0001h      DATA     2         @HCCINIT_CheckStateSCL (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     008dh     008dh    0001h      DATA     2         @HCCINIT_ACK (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
-     00h     008eh     009dh    0010h      DATA     0.9375    @HCCINIT0_display_Buffer (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     0058h     0061h    000ah      CODE               @crom (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     0062h     006fh    000eh      CODE               _builtin_holtek_delay_isr00 (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0070h     0079h    000ah      CODE               __DELAYX (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     007ah     0085h    000ch      CODE               _i2c_stop (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
+     00h     0086h     0098h    0013h      CODE               _i2c_read_ACK (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
+     00h     0099h     00cdh    0035h      CODE               _i2c_write (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
+     00h     00ceh     00d4h    0007h      CODE               _i2c_start (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
+     00h     00d5h     00f3h    001fh      CODE               _displayON (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     00f4h     0101h    000eh      CODE               _CROM2PROM (CROM2PROM)
+     00h     0102h     014eh    004dh      CODE               _show (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     014fh     01a8h    005ah      CODE               _Display_Number (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     01a9h     01dfh    0037h      CODE               _builtin_holtek_divmodhi4_isr00 (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     01e0h     01feh    001fh      CODE               _displayOFF (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     01ffh     0217h    0019h      CODE               _LED_all_TURN_ON (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     0218h     0231h    001ah      CODE               _HT16K33_LED_RAM_Clear (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     0232h     0239h    0008h      CODE               _i2c_init (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
+     00h     023ah     02afh    0076h      CODE               _init_HT16K33 (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     02b0h     02b6h    0007h      CODE               _UC_HT16K33 (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     02b7h     034dh    0097h      CODE               _main (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     034eh     0352h    0005h      CODE               @ROMDATA_BASE (C:\HT-3000\UC_F5660\STARTUP1_L.OBJ)
+     00h     0080h     0080h    0001h      DATA     63        @data_ra (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     42        @data_rb (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     26        @data_rc (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     4         @data_rd (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0084h     0084h    0001h      DATA     4         @data_re (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     008fh     008fh    0001h      DATA     13        @HCCINIT_CheckAddressCnt (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     0090h     0090h    0001h      DATA     2         @HCCINIT_CheckStateSDA (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
+     00h     0091h     0091h    0001h      DATA     2         @HCCINIT_CheckStateSCL (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
+     00h     0092h     0092h    0001h      DATA     2         @HCCINIT_ACK (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
+     00h     0093h     00a2h    0010h      DATA     1.5625    @HCCINIT0_display_Buffer (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
 
      Local Sections
 
      Bank    Start     End      Length     Class    AvgIns    Name
-     00h     008ah     008ah    0000h      LOCAL    0         @dummy (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     008ah     008ah    0000h      LOCAL    0         _main (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     0085h     0085h    0000h      LOCAL    0         _System_Clock_Init (C:\HT-3000\UC_F5660\HT8_TIMEBASE.OBJ)
+     00h     008fh     008fh    0000h      LOCAL    0         @dummy (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     008dh     008eh    0002h      LOCAL    7         _main (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
      00h     008ah     008ah    0000h      LOCAL    0         _UC_HT16K33 (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
      00h     0086h     0086h    0001h      LOCAL    12        _init_HT16K33 (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
      00h     0085h     0085h    0000h      LOCAL    0         _i2c_init (C:\HT-3000\UC_F5660\UC_I2C.OBJ)
@@ -71,58 +74,71 @@ Input Library File: D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LI
      00h     0086h     0089h    0004h      LOCAL    3.5       _show (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
      00h     0085h     0085h    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
      00h     008ah     008ah    0000h      LOCAL    0         _LED_all_TURN_ON (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
-     00h     0086h     0086h    0000h      LOCAL    0         _blank (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     0086h     0086h    0000h      LOCAL    0         _displayOFF (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     0085h     008ch    0008h      LOCAL    11.125    _builtin_holtek_divmodhi4_isr00 (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0085h     0086h    0002h      LOCAL    15        _Display_Number (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     0086h     0086h    0000h      LOCAL    0         _displayON (C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ)
+     00h     0085h     0085h    0001h      LOCAL    3         _builtin_holtek_delay_isr00 (D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
 
      Public Symbols Information
      Address            Public by Name
-     008dh              _ACK
+     0092h              _ACK
      0010h              _ADC_ISR
      0028h              _COMP0_ISR
      002ch              _COMP1_ISR
-     008ah              _CheckAddressCnt
-     0006h              _Crom2Prom
-     0005h              _Crom2PromNext
-     0143h              _HT16K33_LED_RAM_Clear
+     008fh              _CheckAddressCnt
+     00f4h              _Crom2Prom
+     00f4h              _Crom2PromNext
+     014fh              _Display_Number
+     0085h              _Display_Number_2
+     0218h              _HT16K33_LED_RAM_Clear
      0020h              _I2CTO_Timer1_ISR
      0004h              _INT0_ISR
      0008h              _INT1_ISR
      0030h              _INT2_ISR
      0034h              _INT3_ISR
-     0129h              _LED_all_TURN_ON
+     01ffh              _LED_all_TURN_ON
      001ch              _LVD_EEPROM_UART_SIM_ISR
-     01e3h              _System_Clock_Init
      0014h              _TB0_ISR
      0018h              _TB1_ISR
      000ch              _Timer0_ISR
      0024h              _Timer2_Timer3_ISR
-     01dbh              _UC_HT16K33
-     005eh              __DELAYX0
-     005dh              __DELAYX1
-     005ch              __DELAYX2
-     005bh              __DELAYX3
-     005ah              __DELAYX4
-     0059h              __DELAYX5
-     0058h              __DELAYX6
-     00bdh              _blank
-     015dh              _i2c_init
-     006eh              _i2c_read_ACK
-     00b6h              _i2c_start
-     0062h              _i2c_stop
-     0081h              _i2c_write
-     0165h              _init_HT16K33
-     01eeh              _main
-     00dch              _show
+     02b0h              _UC_HT16K33
+     0073h              __DELAYX0
+     0072h              __DELAYX1
+     0072h              __DELAYX2
+     0071h              __DELAYX3
+     0071h              __DELAYX4
+     0070h              __DELAYX5
+     0070h              __DELAYX6
+     0064h              __DELAYY0_isr00
+     0064h              __DELAYY1_isr00
+     0063h              __DELAYY2_isr00
+     0063h              __DELAYY3_isr00
+     0062h              __DELAYY4_isr00
+     0062h              __DELAYY5_isr00
+     01a9h              _builtin_holtek_divmodhi4_isr00
+     01b2h              _builtin_holtek_udivmodhi4_isr00
+     008ah              _builtin_holtek_udivmodhi4_isr00_2
+     01e0h              _displayOFF
+     00d5h              _displayON
+     0232h              _i2c_init
+     0086h              _i2c_read_ACK
+     00ceh              _i2c_start
+     007ah              _i2c_stop
+     0099h              _i2c_write
+     023ah              _init_HT16K33
+     02b7h              _main
+     0102h              _show
      0080h              ra
      0081h              rb
      0082h              rc
      0083h              rd
      0084h              re
-     01f3h              startup_value_1
+     034eh              startup_value_1
 
      Address            Public by Value
      0004h              _INT0_ISR
-     0005h              _Crom2PromNext
-     0006h              _Crom2Prom
      0008h              _INT1_ISR
      000ch              _Timer0_ISR
      0010h              _ADC_ISR
@@ -135,45 +151,58 @@ Input Library File: D:\HT-IDE3000_original_file\HT-IDE3000V8.x\HT-IDE3000V8.x\LI
      002ch              _COMP1_ISR
      0030h              _INT2_ISR
      0034h              _INT3_ISR
-     0058h              __DELAYX6
-     0059h              __DELAYX5
-     005ah              __DELAYX4
-     005bh              __DELAYX3
-     005ch              __DELAYX2
-     005dh              __DELAYX1
-     005eh              __DELAYX0
-     0062h              _i2c_stop
-     006eh              _i2c_read_ACK
+     0062h              __DELAYY4_isr00
+     0062h              __DELAYY5_isr00
+     0063h              __DELAYY2_isr00
+     0063h              __DELAYY3_isr00
+     0064h              __DELAYY0_isr00
+     0064h              __DELAYY1_isr00
+     0070h              __DELAYX5
+     0070h              __DELAYX6
+     0071h              __DELAYX3
+     0071h              __DELAYX4
+     0072h              __DELAYX1
+     0072h              __DELAYX2
+     0073h              __DELAYX0
+     007ah              _i2c_stop
      0080h              ra
-     0081h              _i2c_write
      0081h              rb
      0082h              rc
      0083h              rd
      0084h              re
-     008ah              _CheckAddressCnt
-     008dh              _ACK
-     00b6h              _i2c_start
-     00bdh              _blank
-     00dch              _show
-     0129h              _LED_all_TURN_ON
-     0143h              _HT16K33_LED_RAM_Clear
-     015dh              _i2c_init
-     0165h              _init_HT16K33
-     01dbh              _UC_HT16K33
-     01e3h              _System_Clock_Init
-     01eeh              _main
-     01f3h              startup_value_1
+     0085h              _Display_Number_2
+     0086h              _i2c_read_ACK
+     008ah              _builtin_holtek_udivmodhi4_isr00_2
+     008fh              _CheckAddressCnt
+     0092h              _ACK
+     0099h              _i2c_write
+     00ceh              _i2c_start
+     00d5h              _displayON
+     00f4h              _Crom2PromNext
+     00f4h              _Crom2Prom
+     0102h              _show
+     014fh              _Display_Number
+     01a9h              _builtin_holtek_divmodhi4_isr00
+     01b2h              _builtin_holtek_udivmodhi4_isr00
+     01e0h              _displayOFF
+     01ffh              _LED_all_TURN_ON
+     0218h              _HT16K33_LED_RAM_Clear
+     0232h              _i2c_init
+     023ah              _init_HT16K33
+     02b0h              _UC_HT16K33
+     02b7h              _main
+     034eh              startup_value_1
 
 
 ROM Usage Statistics
     Bank      Size      Used     Percentage
-     00h       2000h     01d6h    5%
+     00h       2000h     032dh    9%
      01h       2000h     0000h    0%
-     Total     4000h     01d6h    2%
+     Total     4000h     032dh    4%
 
 RAM Usage Statistics
     Bank      Size      Used     Percentage
-     00h       0080h     001eh    23%
+     00h       0080h     0023h    27%
      02h       0080h     0000h    0%
      03h       0080h     0000h    0%
      04h       0080h     0000h    0%
@@ -181,10 +210,11 @@ RAM Usage Statistics
      06h       0080h     0000h    0%
      07h       0080h     0000h    0%
      08h       0080h     0000h    0%
-     Total     0400h     001eh    2%
+     Total     0400h     0023h    3%
 
 Use Stack Count
 _LED_COM5_TUR_ON: 2
+_Number9to0: 3
 _main: 5
 
 Call Tree
@@ -195,9 +225,21 @@ Call Tree
             __DELAYX (1)
         _i2c_stop (0)
         __DELAYX (0)
+    _Number9to0
+        _Crom2Prom (0)
+        _Crom2Prom (0)
+        _show (0)
+            _i2c_start (1)
+            _i2c_write (1)
+            _i2c_read_ACK (1)
+                __DELAYX (2)
+            _Crom2Prom (1)
+            _Crom2Prom (1)
+            _i2c_stop (1)
+            __DELAYX (1)
+        _builtin_holtek_delay_isr00 (0)
     @dummy
         _main (0)
-            _System_Clock_Init (1)
             _UC_HT16K33 (1)
                 _init_HT16K33 (2)
                     _i2c_init (3)
@@ -227,13 +269,32 @@ Call Tree
                         _Crom2Prom (4)
                         _i2c_stop (4)
                         __DELAYX (4)
-                _blank (2)
-                    _i2c_start (3)
-                    _i2c_write (3)
-                    _i2c_read_ACK (3)
-                        __DELAYX (4)
-                    _i2c_stop (3)
+            _displayOFF (1)
+                _i2c_start (2)
+                _i2c_write (2)
+                _i2c_read_ACK (2)
                     __DELAYX (3)
+                _i2c_stop (2)
+                __DELAYX (2)
+            _builtin_holtek_divmodhi4_isr00 (1)
+            _Display_Number (1)
+            _show (1)
+                _i2c_start (2)
+                _i2c_write (2)
+                _i2c_read_ACK (2)
+                    __DELAYX (3)
+                _Crom2Prom (2)
+                _Crom2Prom (2)
+                _i2c_stop (2)
+                __DELAYX (2)
+            _displayON (1)
+                _i2c_start (2)
+                _i2c_write (2)
+                _i2c_read_ACK (2)
+                    __DELAYX (3)
+                _i2c_stop (2)
+                __DELAYX (2)
+            _builtin_holtek_delay_isr00 (1)
 
 HLINK: Program entry point at section '@code' (address 0) of file 'C:\HT-3000\UC_F5660\UC_F5660_MAIN.OBJ'
 
